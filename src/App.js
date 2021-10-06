@@ -15,11 +15,11 @@ function App() {
       const res = await fetch('/.netlify/functions/getLinks')
       const links = await res.json()
       setLinks(links)
+      console.log(links)
     }catch(err){
       console.error(err)
     }
   }
-
   useEffect(()=>{
     loadLinks()
   },[])
